@@ -372,6 +372,9 @@ function App() {
 					<img src="./slider/77.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
+					<img src="./slider/99.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
 					<img src="./slider/66.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
