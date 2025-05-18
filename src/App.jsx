@@ -18,31 +18,32 @@ function App() {
 
 	// timings
 
-	// const cuties_start = 1800;
-	// const regular_1_start = 3500;
-	// const regular_2_start = 21500;
-	// const regular_3_start = 32500;
-	// const regular_4_start = 47000; // divider
-	// const regular_5_start = 49000;
-	// const regular_6_start = 209000; // divider
-	// const regular_7_start = 211000;
-	// const regular_8_start = 266500; // divider
-	// const regular_9_start = 268000; // divider
-	// const regular_10_start = 267000; // divider
-	// const peace_btn = 270000;
+	const cuties_start = 1800;
+	const regular_1_start = 3500;
+	const regular_2_start = 21500;
+	const regular_3_start = 32500;
+	const regular_4_start = 47000; // divider
+	const regular_5_start = 49000;
+	const regular_6_start = 215300; // divider
+	const regular_7_start = 217000;
+	const regular_8_start = 322500; // divider
+	const regular_9_start = 324000;
+	const regular_10_start = 326000;
+	const peace_btn_start = 327000;
+	const slider_start = 328000;
 
-	const cuties_start = 0;
-	const regular_1_start = 0;
-	const regular_2_start = 0;
-	const regular_3_start = 0;
-	const regular_4_start = 0; // divider
-	const regular_5_start = 0;
-	const regular_6_start = 0; // divider
-	const regular_7_start = 0;
-	const regular_8_start = 0; // divider
-	const regular_9_start = 0;
-	const regular_10_start = 0;
-	const peace_btn = 270000;
+	// const cuties_start = 0;
+	// const regular_1_start = 0;
+	// const regular_2_start = 0;
+	// const regular_3_start = 0;
+	// const regular_4_start = 0; // divider
+	// const regular_5_start = 0;
+	// const regular_6_start = 0; // divider
+	// const regular_7_start = 0;
+	// const regular_8_start = 0; // divider
+	// const regular_9_start = 0;
+	// const regular_10_start = 0;
+	// const peace_btn = 270000;
 
 	// utils
 
@@ -315,7 +316,7 @@ function App() {
 				});
 			}, regular_9_start);
 		});
-		// REGULAR 9
+		// REGULAR 10
 		document.querySelectorAll('.typed-still-regular-10').forEach(function (el) {
 			document.querySelectorAll('.regular-10').forEach(function (el) {
 				el.style.opacity = '0';
@@ -338,6 +339,25 @@ function App() {
 					},
 				});
 			}, regular_10_start);
+		});
+		// BTN
+		document.querySelectorAll('.peace-wrap').forEach(function (el) {
+			document.querySelectorAll('.peace-wrap').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, peace_btn_start);
+			});
+		});
+
+		// SLIDER
+		document.querySelectorAll('.mySwiper').forEach(function (el) {
+			document.querySelectorAll('.mySwiper').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, slider_start);
+			});
 		});
 	});
 
@@ -435,10 +455,11 @@ function App() {
 					<br />
 					твой день рождения для меня — не просто дата, это{' '}
 					<span className="yellow">настоящий праздник</span>. и не как все
-					остальные праздники, а по-настоящему особенный, как и ты. хотя, если
-					честно, каждый другой день с тобой ощущался как подарок. но не думай,
-					что я пишу это всё просто в честь др, — я всегда к тебе так отношусь,
-					пусть мы в последнее время и не говорили так ярко о чувствах...
+					остальные праздники, а ПО-НАСТОЯЩЕМУ особенный, как и ты. хотя, если
+					честно, каждый другой день с тобой ощущался как подарок мне. но не
+					думай, что я пишу это всё просто в честь др, — я всегда к тебе так
+					отношусь, пусть мы в последнее время и не говорили так ярко о
+					чувствах...
 					<br />
 					<br />я всё ещё постоянно вспоминаю все наши моменты: как мы играли в
 					стардью в новогоднюю ночь, проходили тестики, вместе смотрели фильмы,
@@ -463,9 +484,10 @@ function App() {
 					<br />
 					<br />я каждый день, каждую секунду{' '}
 					<span className="blue">восхищаюсь</span> тобой, твоим вкусом — он
-					самый тонкий на свете, никто как ты не умеет подбирать цвета, слова,
-					предметы одежды и всё-всё-всё. за что бы ты только ни бралась, у тебя
-					всегда и всё получается просто прекрасно, у тебя золотые ручки!
+					самый тонкий на свете, никто как ты не умеет подбирать цвета,
+					слова,картинки, предметы одежды и всё-всё-всё. за что бы ты только ни
+					бралась, у тебя всегда и всё получается просто прекрасно, у тебя
+					золотые ручки!
 					<br />
 					ты пишешь картины, которые по-настоящему захватывают дух, с самого
 					первого дня они меня завораживают, — даже самые признанные мировые
@@ -526,7 +548,7 @@ function App() {
 					меня переосмыслить всё, что было за последние месяцы. я наконец
 					увидел, как по-разному мы реагируем на стресс и проблемы: тебе всегда
 					было нужно уединение, время подумать и пространство, а мне — наоборот,
-					сразу же говорить, разбирать проблему, понять тебя как можно скорее.
+					сразу же поговорить, разобрать, понять тебя как можно скорее.
 					<br />
 					я, как слепой, не видел, что мои попытки «решить всё сейчас» для тебя
 					выглядели как давление и атаки, а твои попытки отойти от эмоций для
