@@ -10,7 +10,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+html {
+	overflow-x: hidden;
+}
 body {
 	font-family: 'Press Start 2P', system-ui;
 	margin-left: 6%;
@@ -23,6 +25,7 @@ body {
 }
 
 .container__main {
+	overflow-x: hidden;
 	width: 80%;
 }
 
