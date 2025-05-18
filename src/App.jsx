@@ -1,13 +1,9 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-
-// import required modules
 import { EffectCards } from 'swiper/modules';
+import Typed from 'typed.js';
+import { useEffect } from 'react';
 
 function App() {
 	// const textTypeSpeed = 40;
@@ -54,338 +50,332 @@ function App() {
 	// 	return Date.now() >= startTime;
 	// };
 
-	document.querySelectorAll('.typed-loop').forEach(function (el) {
-		document.querySelectorAll('.heading-cuties').forEach(function (el) {
-			el.style.opacity = '0';
+	useEffect(() => {
+		document.querySelectorAll('.typed-loop').forEach(function (el) {
+			document.querySelectorAll('.heading-cuties').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, cuties_start);
+			});
+
+			const typedInstance = new Typed(el, {
+				stringsElement: el.previousElementSibling,
+				loop: true,
+				typeSpeed: smilesTypeSpeed,
+				backSpeed: smilesTypeSpeed,
+				backDelay: 1500,
+				showCursor: false,
+			});
+		});
+		document.querySelectorAll('.typed-still').forEach(function (el) {
+			const typedInstance = new Typed(el, {
+				stringsElement: el.previousElementSibling,
+				loop: false,
+				typeSpeed: textTypeSpeed,
+				backSpeed: 20,
+				backDelay: 1700,
+				showCursor: true,
+			});
+		});
+		document.querySelectorAll('.typed-still-nocursor').forEach(function (el) {
+			const typedInstance = new Typed(el, {
+				stringsElement: el.previousElementSibling,
+				loop: false,
+				typeSpeed: textTypeSpeed,
+				backSpeed: 20,
+				backDelay: 1700,
+				showCursor: false,
+			});
+		});
+		// REGULAR 1
+		document.querySelectorAll('.typed-still-regular-1').forEach(function (el) {
+			document.querySelectorAll('.regular-1').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_1_start);
+			});
+
 			setTimeout(() => {
-				el.style.opacity = '1';
-			}, cuties_start);
-		});
-
-		const typedInstance = new Typed(el, {
-			stringsElement: el.previousElementSibling,
-			loop: true,
-			typeSpeed: smilesTypeSpeed,
-			backSpeed: smilesTypeSpeed,
-			backDelay: 1500,
-			showCursor: false,
-		});
-	});
-
-	document.querySelectorAll('.typed-still').forEach(function (el) {
-		const typedInstance = new Typed(el, {
-			stringsElement: el.previousElementSibling,
-			loop: false,
-			typeSpeed: textTypeSpeed,
-			backSpeed: 20,
-			backDelay: 1700,
-			showCursor: true,
-		});
-	});
-
-	document.querySelectorAll('.typed-still-nocursor').forEach(function (el) {
-		const typedInstance = new Typed(el, {
-			stringsElement: el.previousElementSibling,
-			loop: false,
-			typeSpeed: textTypeSpeed,
-			backSpeed: 20,
-			backDelay: 1700,
-			showCursor: false,
-		});
-	});
-
-	// REGULAR 1
-	document.querySelectorAll('.typed-still-regular-1').forEach(function (el) {
-		document.querySelectorAll('.regular-1').forEach(function (el) {
-			el.style.opacity = '0';
-			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_1_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 2
+		document.querySelectorAll('.typed-still-regular-2').forEach(function (el) {
+			document.querySelectorAll('.regular-2').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_2_start);
 			});
-		}, regular_1_start);
-	});
 
-	// REGULAR 2
-	document.querySelectorAll('.typed-still-regular-2').forEach(function (el) {
-		document.querySelectorAll('.regular-2').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_2_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 3
+		document.querySelectorAll('.typed-still-regular-3').forEach(function (el) {
+			document.querySelectorAll('.regular-3').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_3_start);
 			});
-		}, regular_2_start);
-	});
 
-	// REGULAR 3
-	document.querySelectorAll('.typed-still-regular-3').forEach(function (el) {
-		document.querySelectorAll('.regular-3').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_3_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 4
+		document.querySelectorAll('.typed-still-regular-4').forEach(function (el) {
+			document.querySelectorAll('.regular-4').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_4_start);
 			});
-		}, regular_3_start);
-	});
 
-	// REGULAR 4
-	document.querySelectorAll('.typed-still-regular-4').forEach(function (el) {
-		document.querySelectorAll('.regular-4').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_4_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 5
+		document.querySelectorAll('.typed-still-regular-5').forEach(function (el) {
+			document.querySelectorAll('.regular-5').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_5_start);
 			});
-		}, regular_4_start);
-	});
 
-	// REGULAR 5
-	document.querySelectorAll('.typed-still-regular-5').forEach(function (el) {
-		document.querySelectorAll('.regular-5').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_5_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 6
+		document.querySelectorAll('.typed-still-regular-6').forEach(function (el) {
+			document.querySelectorAll('.regular-6').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_6_start);
 			});
-		}, regular_5_start);
-	});
 
-	// REGULAR 6
-	document.querySelectorAll('.typed-still-regular-6').forEach(function (el) {
-		document.querySelectorAll('.regular-6').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_6_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 7
+		document.querySelectorAll('.typed-still-regular-7').forEach(function (el) {
+			document.querySelectorAll('.regular-7').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_7_start);
 			});
-		}, regular_6_start);
-	});
 
-	// REGULAR 7
-	document.querySelectorAll('.typed-still-regular-7').forEach(function (el) {
-		document.querySelectorAll('.regular-7').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_7_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 8
+		document.querySelectorAll('.typed-still-regular-8').forEach(function (el) {
+			document.querySelectorAll('.regular-8').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_8_start);
 			});
-		}, regular_7_start);
-	});
 
-	// REGULAR 8
-	document.querySelectorAll('.typed-still-regular-8').forEach(function (el) {
-		document.querySelectorAll('.regular-8').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_8_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 9
+		document.querySelectorAll('.typed-still-regular-9').forEach(function (el) {
+			document.querySelectorAll('.regular-9').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_9_start);
 			});
-		}, regular_8_start);
-	});
 
-	// REGULAR 9
-	document.querySelectorAll('.typed-still-regular-9').forEach(function (el) {
-		document.querySelectorAll('.regular-9').forEach(function (el) {
-			el.style.opacity = '0';
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_9_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+		// REGULAR 10
+		document.querySelectorAll('.typed-still-regular-10').forEach(function (el) {
+			document.querySelectorAll('.regular-10').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_10_start);
 			});
-		}, regular_9_start);
-	});
-	// REGULAR 10
-	document.querySelectorAll('.typed-still-regular-10').forEach(function (el) {
-		document.querySelectorAll('.regular-10').forEach(function (el) {
-			el.style.opacity = '0';
+
 			setTimeout(() => {
-				el.style.opacity = '1';
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
 			}, regular_10_start);
 		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
-			});
-		}, regular_10_start);
-	});
-	// BTN
-	document.querySelectorAll('.peace-wrap').forEach(function (el) {
+		// BTN
 		document.querySelectorAll('.peace-wrap').forEach(function (el) {
-			el.style.opacity = '0';
-			setTimeout(() => {
-				el.style.opacity = '1';
-			}, peace_btn_start);
-		});
-	});
-
-	// REGULAR 11
-	document.querySelectorAll('.typed-still-regular-11').forEach(function (el) {
-		document.querySelectorAll('.regular-11').forEach(function (el) {
-			el.style.opacity = '0';
-			setTimeout(() => {
-				el.style.opacity = '1';
-			}, regular_11_start);
-		});
-
-		setTimeout(() => {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: regularTextTypeSpeed,
-				backSpeed: regularTextTypeSpeed,
-				backDelay: 1700,
-				showCursor: true,
-				cursorChar: '|',
-				onComplete() {
-					typedInstance.cursor.remove();
-				},
+			document.querySelectorAll('.peace-wrap').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, peace_btn_start);
 			});
-		}, regular_11_start);
-	});
-
-	// SLIDER
-	document.querySelectorAll('.mySwiper').forEach(function (el) {
-		document.querySelectorAll('.mySwiper').forEach(function (el) {
-			el.style.opacity = '0';
-			setTimeout(() => {
-				el.style.opacity = '1';
-			}, slider_start);
 		});
-	});
+		// REGULAR 11
+		document.querySelectorAll('.typed-still-regular-11').forEach(function (el) {
+			document.querySelectorAll('.regular-11').forEach(function (el) {
+				el.style.opacity = '0';
+				setTimeout(() => {
+					el.style.opacity = '1';
+				}, regular_11_start);
+			});
+
+			setTimeout(() => {
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: regularTextTypeSpeed,
+					backSpeed: regularTextTypeSpeed,
+					backDelay: 1700,
+					showCursor: true,
+					cursorChar: '|',
+					onComplete() {
+						typedInstance.cursor.remove();
+					},
+				});
+			}, regular_11_start);
+
+			// SLIDER
+			document.querySelectorAll('.mySwiper').forEach(function (el) {
+				document.querySelectorAll('.mySwiper').forEach(function (el) {
+					el.style.opacity = '0';
+					setTimeout(() => {
+						el.style.opacity = '1';
+					}, slider_start);
+				});
+			});
+		});
+
+		return () => {
+			typedInstance.destroy();
+		};
+	}, []);
 
 	return (
 		<div className="container__main">
