@@ -20,8 +20,8 @@ function App() {
 	const smilesTypeSpeed = 100;
 	const cuties_start = 1800;
 	const regular_1_start = 3500;
-	const peace_btn_start = 328000;
-	const slider_start = 330000;
+	const peace_btn_start = 336000;
+	const slider_start = 338000;
 
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -234,7 +234,7 @@ function App() {
 					<br />
 					ты — самый чудесный человек на свете, моё «самое-самое», абсолютно во
 					всём, и так будет всегда. я бесконечно счастлив, что судьба однажды
-					связала нас.{' '}
+					свела нас вместе.{' '}
 					<span className="golden">
 						я тебя очень сильно люблю, ты моё самое тёплое, комфортное, приятное
 						место в этом мире — мой настоящий дом.
