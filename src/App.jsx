@@ -7,23 +7,25 @@ import { useEffect } from 'react';
 
 function App() {
 	// timings
-	const textTypeSpeed = 0;
-	const regularTextTypeSpeed = 0;
-	const smilesTypeSpeed = 0;
-	const cuties_start = 0;
-	const regular_1_start = 0;
-	const peace_btn_start = 0;
-	const slider_start = 0;
+	// const textTypeSpeed = 0;
+	// const regularTextTypeSpeed = 0;
+	// const smilesTypeSpeed = 0;
+	// const cuties_start = 0;
+	// const regular_1_start = 0;
+	// const peace_btn_start = 0;
+	// const slider_start = 0;
 
-	// const textTypeSpeed = 30;
-	// const regularTextTypeSpeed = 30;
-	// const smilesTypeSpeed = 100;
-	// const cuties_start = 1800;
-	// const regular_1_start = 3500;
-	// const peace_btn_start = 328000;
-	// const slider_start = 330000;
+	const textTypeSpeed = 30;
+	const regularTextTypeSpeed = 30;
+	const smilesTypeSpeed = 100;
+	const cuties_start = 1800;
+	const regular_1_start = 3500;
+	const peace_btn_start = 328000;
+	const slider_start = 330000;
 
 	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+
 		document.querySelectorAll('.typed-loop').forEach(function (el) {
 			document.querySelectorAll('.heading-cuties').forEach(function (el) {
 				el.style.opacity = '0';
@@ -354,6 +356,30 @@ function App() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src="./slider/6.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/9.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/8.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/7.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/77.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/66.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/10.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/14.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/15.jpg" alt="" />
 				</SwiperSlide>
 			</Swiper>
 		</div>
