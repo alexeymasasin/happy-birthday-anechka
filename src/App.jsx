@@ -6,49 +6,22 @@ import Typed from 'typed.js';
 import { useEffect } from 'react';
 
 function App() {
-	// const textTypeSpeed = 40;
-	// const regularTextTypeSpeed = 28;
-	const textTypeSpeed = 30;
-	const regularTextTypeSpeed = 30;
-	const smilesTypeSpeed = 100;
-
 	// timings
+	const textTypeSpeed = 0;
+	const regularTextTypeSpeed = 0;
+	const smilesTypeSpeed = 0;
+	const cuties_start = 0;
+	const regular_1_start = 0;
+	const peace_btn_start = 0;
+	const slider_start = 0;
 
-	const cuties_start = 1800;
-	const regular_1_start = 3500;
-	const regular_2_start = 21500;
-	const regular_3_start = 32500;
-	const regular_4_start = 47000; // divider
-	const regular_5_start = 49000;
-	const regular_6_start = 214300; // divider
-	const regular_7_start = 216000;
-	const regular_8_start = 324500; // divider
-	const regular_9_start = 325500;
-	const regular_10_start = 328000;
-	const peace_btn_start = 332000;
-	const regular_11_start = 333000; // hint
-	const slider_start = 335500;
-
-	// const cuties_start = 0;
-	// const regular_1_start = 0;
-	// const regular_2_start = 0;
-	// const regular_3_start = 0;
-	// const regular_4_start = 0; // divider
-	// const regular_5_start = 0;
-	// const regular_6_start = 0; // divider
-	// const regular_7_start = 0;
-	// const regular_8_start = 0; // divider
-	// const regular_9_start = 0;
-	// const regular_10_start = 0;
-	// const peace_btn_start = 0;
-	// const regular_11_start = 0; // hint
-	// const slider_start = 0;
-
-	// utils
-
-	// const shouldShowCursor = (startTime) => {
-	// 	return Date.now() >= startTime;
-	// };
+	// const textTypeSpeed = 30;
+	// const regularTextTypeSpeed = 30;
+	// const smilesTypeSpeed = 100;
+	// const cuties_start = 1800;
+	// const regular_1_start = 3500;
+	// const peace_btn_start = 328000;
+	// const slider_start = 330000;
 
 	useEffect(() => {
 		document.querySelectorAll('.typed-loop').forEach(function (el) {
@@ -112,222 +85,6 @@ function App() {
 				});
 			}, regular_1_start);
 		});
-		// REGULAR 2
-		document.querySelectorAll('.typed-still-regular-2').forEach(function (el) {
-			document.querySelectorAll('.regular-2').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_2_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_2_start);
-		});
-		// REGULAR 3
-		document.querySelectorAll('.typed-still-regular-3').forEach(function (el) {
-			document.querySelectorAll('.regular-3').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_3_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_3_start);
-		});
-		// REGULAR 4
-		document.querySelectorAll('.typed-still-regular-4').forEach(function (el) {
-			document.querySelectorAll('.regular-4').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_4_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_4_start);
-		});
-		// REGULAR 5
-		document.querySelectorAll('.typed-still-regular-5').forEach(function (el) {
-			document.querySelectorAll('.regular-5').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_5_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_5_start);
-		});
-		// REGULAR 6
-		document.querySelectorAll('.typed-still-regular-6').forEach(function (el) {
-			document.querySelectorAll('.regular-6').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_6_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_6_start);
-		});
-		// REGULAR 7
-		document.querySelectorAll('.typed-still-regular-7').forEach(function (el) {
-			document.querySelectorAll('.regular-7').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_7_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_7_start);
-		});
-		// REGULAR 8
-		document.querySelectorAll('.typed-still-regular-8').forEach(function (el) {
-			document.querySelectorAll('.regular-8').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_8_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_8_start);
-		});
-		// REGULAR 9
-		document.querySelectorAll('.typed-still-regular-9').forEach(function (el) {
-			document.querySelectorAll('.regular-9').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_9_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_9_start);
-		});
-		// REGULAR 10
-		document.querySelectorAll('.typed-still-regular-10').forEach(function (el) {
-			document.querySelectorAll('.regular-10').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_10_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_10_start);
-		});
 		// BTN
 		document.querySelectorAll('.peace-wrap').forEach(function (el) {
 			document.querySelectorAll('.peace-wrap').forEach(function (el) {
@@ -337,44 +94,17 @@ function App() {
 				}, peace_btn_start);
 			});
 		});
-		// REGULAR 11
-		document.querySelectorAll('.typed-still-regular-11').forEach(function (el) {
-			document.querySelectorAll('.regular-11').forEach(function (el) {
+		// SWIPER
+		document.querySelectorAll('.mySwiper').forEach(function (el) {
+			document.querySelectorAll('.mySwiper').forEach(function (el) {
 				el.style.opacity = '0';
 				setTimeout(() => {
 					el.style.opacity = '1';
-				}, regular_11_start);
-			});
-
-			setTimeout(() => {
-				const typedInstance = new Typed(el, {
-					stringsElement: el.previousElementSibling,
-					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
-					backDelay: 1700,
-					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
-				});
-			}, regular_11_start);
-
-			// SLIDER
-			document.querySelectorAll('.mySwiper').forEach(function (el) {
-				document.querySelectorAll('.mySwiper').forEach(function (el) {
-					el.style.opacity = '0';
-					setTimeout(() => {
-						el.style.opacity = '1';
-					}, slider_start);
-				});
+				}, slider_start);
 			});
 		});
 
-		return () => {
-			typedInstance.destroy();
-		};
+		return () => {};
 	}, []);
 
 	return (
@@ -401,41 +131,22 @@ function App() {
 					я знаю, что ты тоже скучаешь, я здесь. даже если шанс того, что эти
 					слова по-настоящему дойдут до тебя, невелик, я не могу промолчать.
 					потому что ты заслуживаешь это слышать{' '}
-					<span className="green">:)</span>
-				</p>
-			</div>
-			<span className="typed-still-regular-1 regular-text"></span>
-			<br /> <br />
-			<div className="typed-strings regular-2">
-				<p>
+					<span className="green">=)</span>
+					<br /> <br />
 					это не просто поздравление, анечка. это крик души. я понимаю, что день
 					рождения — не лучший повод для откровений в нашей ситуации, но
 					оставить тебя без этих слов — выше моих сил. потому что{' '}
 					<span className="underline">я правда люблю тебя</span>,{' '}
 					<span className="underline">очень</span>.
-				</p>
-			</div>
-			<span className="typed-still-regular-2 regular-text"></span>
-			<br /> <br />
-			<div className="typed-strings regular-3">
-				<p>
+					<br /> <br />
 					мне так много хочется сказать и пожелать тебе, ведь ты — самое светлое
 					и важное, что есть в моей жизни. я изо всех сил старался держаться
 					подальше, потому что уважаю твоё решение, не хочу давить и тревожить,
 					но я просто не могу промолчать в такой важный день. надеюсь, ты
 					поймёшь меня правильно!
-				</p>
-			</div>
-			<span className="typed-still-regular-3 regular-text"></span>
-			<br /> <br />
-			<div className="typed-strings regular-4">
-				<p>-/-/-/-/-/-/-/-/-/-/-</p>
-			</div>
-			{/* divider */}
-			<span className="typed-still-regular-4 regular-text"></span>
-			<br /> <br />
-			<div className="typed-strings regular-5">
-				<p>
+					<br /> <br />
+					{'-/-/-/-/-/-/-/-/-/-/-'}
+					<br /> <br />
 					боже, как же незаметно пролетел ещё один год... год, в которым ты, как
 					всегда, делала этот мир ярче, добрее, теплее, и вообще в разы лучше
 					просто тем, что ты есть. прямо как солнечный зайчик в хмурый день,
@@ -487,14 +198,14 @@ function App() {
 					<br />
 					<br />я <span className="green">горжусь</span> тобой.
 					<br />
-					тем, что ты, несмотря на всё плохое в своей жизни, остаёшься таким
+					за то, что ты, несмотря на всё плохое в своей жизни, остаёшься таким
 					хорошим человеком.
 					<br />
-					тем, как ты справляешься с трудностями, даже когда они кажутся
+					за то, как ты справляешься с трудностями, даже когда они кажутся
 					неподъёмными.
 					<br />
-					горжусь твоей учёбой, — ты так блестяще справляешься, хотя знаю, как
-					это порой непросто.
+					за то, как блестяще ты справляешься с учёбой, хотя знаю, как порой
+					бывает непросто.
 					<br />
 					горжусь тем, как ты держишься, даже когда очень устала.
 					<br />
@@ -536,18 +247,9 @@ function App() {
 					<span className="green">я ценю тебя и всё что с тобой связано</span>,{' '}
 					<span className="red">я верю в тебя и нашу любовь</span>,{' '}
 					<span className="blue">я восхищаюсь и горжусь тобой</span>. правда.
-				</p>
-			</div>
-			<span className="typed-still-regular-5 regular-text"></span>
-			<br /> <br />
-			{/* divider */}
-			<div className="typed-strings regular-6">
-				<p>-/-/-/-/-/-/-/-/-/-/-</p>
-			</div>
-			<span className="typed-still-regular-6 regular-text"></span>
-			<br /> <br />
-			<div className="typed-strings regular-7">
-				<p>
+					<br /> <br />
+					{'-/-/-/-/-/-/-/-/-/-/-'}
+					<br /> <br />
 					мне очень жаль, что я причинил тебе столько боли за последнее время.
 					ты — моё счастье, и мне невыносимо думать о том, что из-за меня ты
 					чувствовала себя плохо.
@@ -600,50 +302,35 @@ function App() {
 					<br />
 					ты — моя родственная душа, мой самый близкий и любимый человек, мой
 					котёночек. я бесконечно благодарен тебе за каждый момент, проведённый
-					вместе, — даже за те, где мы ругались. спасибо тебе за всё, анечка.
+					вместе, — даже за те, в которых мы ругались. спасибо тебе за всё,
+					анечка.
+					<br /> <br />
+					{'-/-/-/-/-/-/-/-/-/-/-'}
+					<br />
+					<br />с любовью, твой лёша
+					<span className="ending-text-small">
+						(который теперь не трясётся над каждым твоим «хорошо», а просто
+						верит тебе)
+					</span>
+					<br />
+					<br />
+					<a href="http://t.me/alexeymasasin" target="_blank">
+						Давай мириться!
+						<img
+							className="heart"
+							src="./icons/1670710-200.png"
+							alt="<3"
+							width={32}
+						/>
+					</a>
+					<span className="ending-text-small hint">
+						штучка ниже, кстати, листается, попробуй!
+					</span>
+					<br />
+					<br />
 				</p>
 			</div>
-			<span className="typed-still-regular-7 regular-text"></span>
-			<br /> <br />
-			{/* divider */}
-			<div className="typed-strings regular-8">
-				<p>-/-/-/-/-/-/-/-/-/-/-</p>
-			</div>
-			<span className="typed-still-regular-8 regular-text"></span>
-			<br />
-			<br />
-			<div className="typed-strings regular-9">
-				<p>с любовью, твой лёша</p>
-			</div>
-			<span className="typed-still-regular-9 ending-text"></span>
-			<br />
-			<div className="typed-strings regular-10">
-				<p>
-					(который теперь не трясётся над каждым твоим «хорошо», а просто верит
-					тебе)
-				</p>
-			</div>
-			<span className="typed-still-regular-10 ending-text-small"></span>
-			<br />
-			<br />
-			<div className="peace-wrap">
-				<a href="http://t.me/alexeymasasin" target="_blank">
-					Давай мириться!
-					<img
-						className="heart"
-						src="./icons/1670710-200.png"
-						alt="<3"
-						width={32}
-					/>
-				</a>
-			</div>
-			<br />
-			<br />
-			<div className="typed-strings regular-11">
-				<p>штучка ниже, кстати, листается, попробуй!</p>
-			</div>
-			<span className="typed-still-regular-11 ending-text-small hint"></span>
-			{/* swiper */}
+			<span className="typed-still-regular-1 regular-text"></span>
 			<Swiper
 				effect={'cards'}
 				grabCursor={true}
