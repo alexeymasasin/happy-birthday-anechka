@@ -131,6 +131,7 @@ a {
 }
 
 .peace-wrap {
+	transition: all 0.5s;
 }
 
 .heart {
@@ -148,6 +149,10 @@ a {
 	100% {
 		transform: rotate(-10deg);
 	}
+}
+
+.mySwiper {
+	transition: all 0.5s;
 }
 
 .swiper {
