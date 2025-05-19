@@ -32,11 +32,11 @@ function Welcome({ onDismiss }) {
 
 	const fire = () => {
 		confetti({
-			particleCount: 150,
-			spread: 100,
-			origin: { y: 0.7 },
+			particleCount: 260,
+			spread: 80,
+			origin: { y: 0.8 },
 			colors: ['#f093f6', '#97ef7f', '#f9f68b', '#72f8f3'],
-			shapes: ['square'], // Пиксельные квадратики
+			shapes: ['square'],
 		});
 	};
 

@@ -42,7 +42,7 @@ p {
 }
 
 .typed-still-nocursor {
-	font-size: 38px;
+	font-size: 30px;
 }
 
 .text__editor {
@@ -59,8 +59,17 @@ p {
 	position: relative;
 	bottom: 6px;
 	left: 4px;
-	font-size: 24px;
+	font-size: 19px;
 	color: #f093f6;
+}
+
+@media screen and (max-width: 368px) {
+	.typed-still-nocursor {
+		font-size: 24px;
+	}
+	.heading-cuties {
+		font-size: 14px;
+	}
 }
 
 .green {
