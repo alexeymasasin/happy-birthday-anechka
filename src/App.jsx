@@ -3,9 +3,17 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import Typed from 'typed.js';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Welcome from './components/Welcome/Welcome';
 
 function App() {
+	const [showWelcome, setShowWelcome] = useState(true);
+	const [isLoaded, setIsLoaded] = useState(false);
+
+	const handleDismiss = () => {
+		setShowWelcome(false);
+	};
+
 	// timings
 	// const textTypeSpeed = 0;
 	// const regularTextTypeSpeed = 0;
@@ -15,100 +23,118 @@ function App() {
 	// const peace_btn_start = 0;
 	// const slider_start = 0;
 
+	return (
+		<>{showWelcome ? <Welcome onDismiss={handleDismiss} /> : <MainContent />}</>
+	);
+}
+
+function MainContent() {
 	const textTypeSpeed = 27;
 	const regularTextTypeSpeed = 27;
 	const smilesTypeSpeed = 100;
 
-	const cuties_start = 2300;
+	const cuties_start = 2700;
 	const regular_1_start = 2500;
 	const peace_btn_start = 346000;
 	const slider_start = 348000;
 
-	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+	function useInitAnimations() {
+		useEffect(() => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 
-		document.querySelectorAll('.typed-loop').forEach(function (el) {
-			document.querySelectorAll('.heading-cuties').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, cuties_start);
-			});
+			document.querySelectorAll('.typed-loop').forEach(function (el) {
+				document.querySelectorAll('.heading-cuties').forEach(function (el) {
+					el.style.opacity = '0';
+					setTimeout(() => {
+						el.style.opacity = '1';
+					}, cuties_start);
+				});
 
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: true,
-				typeSpeed: smilesTypeSpeed,
-				backSpeed: smilesTypeSpeed,
-				backDelay: 1500,
-				showCursor: false,
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: true,
+					typeSpeed: smilesTypeSpeed,
+					backSpeed: smilesTypeSpeed,
+					backDelay: 1500,
+					showCursor: false,
+				});
 			});
-		});
-		document.querySelectorAll('.typed-still').forEach(function (el) {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: textTypeSpeed,
-				backSpeed: 20,
-				backDelay: 1700,
-				showCursor: true,
-			});
-		});
-		document.querySelectorAll('.typed-still-nocursor').forEach(function (el) {
-			const typedInstance = new Typed(el, {
-				stringsElement: el.previousElementSibling,
-				loop: false,
-				typeSpeed: textTypeSpeed,
-				backSpeed: 20,
-				backDelay: 1700,
-				showCursor: false,
-			});
-		});
-		// REGULAR 1
-		document.querySelectorAll('.typed-still-regular-1').forEach(function (el) {
-			document.querySelectorAll('.regular-1').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, regular_1_start);
-			});
-
-			setTimeout(() => {
+			document.querySelectorAll('.typed-still').forEach(function (el) {
 				const typedInstance = new Typed(el, {
 					stringsElement: el.previousElementSibling,
 					loop: false,
-					typeSpeed: regularTextTypeSpeed,
-					backSpeed: regularTextTypeSpeed,
+					typeSpeed: textTypeSpeed,
+					backSpeed: 20,
 					backDelay: 1700,
 					showCursor: true,
-					cursorChar: '|',
-					onComplete() {
-						typedInstance.cursor.remove();
-					},
 				});
-			}, regular_1_start);
-		});
-		// BTN
-		document.querySelectorAll('.peace-wrap').forEach(function (el) {
-			document.querySelectorAll('.peace-wrap').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, peace_btn_start);
 			});
-		});
-		// SWIPER
-		document.querySelectorAll('.mySwiper').forEach(function (el) {
-			document.querySelectorAll('.mySwiper').forEach(function (el) {
-				el.style.opacity = '0';
-				setTimeout(() => {
-					el.style.opacity = '1';
-				}, slider_start);
+			document.querySelectorAll('.typed-still-nocursor').forEach(function (el) {
+				const typedInstance = new Typed(el, {
+					stringsElement: el.previousElementSibling,
+					loop: false,
+					typeSpeed: textTypeSpeed,
+					backSpeed: 20,
+					backDelay: 1700,
+					showCursor: false,
+				});
 			});
-		});
+			// REGULAR 1
+			document
+				.querySelectorAll('.typed-still-regular-1')
+				.forEach(function (el) {
+					document.querySelectorAll('.regular-1').forEach(function (el) {
+						el.style.opacity = '0';
+						setTimeout(() => {
+							el.style.opacity = '1';
+						}, regular_1_start);
+					});
 
-		return () => {};
-	}, []);
+					setTimeout(() => {
+						const typedInstance = new Typed(el, {
+							stringsElement: el.previousElementSibling,
+							loop: false,
+							typeSpeed: regularTextTypeSpeed,
+							backSpeed: regularTextTypeSpeed,
+							backDelay: 1700,
+							showCursor: true,
+							cursorChar: '|',
+							onComplete() {
+								typedInstance.cursor.remove();
+							},
+						});
+					}, regular_1_start);
+				});
+			// BTN
+			document.querySelectorAll('.peace-wrap').forEach(function (el) {
+				document.querySelectorAll('.peace-wrap').forEach(function (el) {
+					el.style.opacity = '0';
+					setTimeout(() => {
+						el.style.opacity = '1';
+					}, peace_btn_start);
+				});
+			});
+			// SWIPER
+			document.querySelectorAll('.mySwiper').forEach(function (el) {
+				document.querySelectorAll('.mySwiper').forEach(function (el) {
+					el.style.opacity = '0';
+					setTimeout(() => {
+						el.style.opacity = '1';
+					}, slider_start);
+				});
+			});
+
+			return () => {
+				document.querySelectorAll('.typed').forEach((el) => {
+					if (el._typed) {
+						el._typed.destroy();
+					}
+				});
+			};
+		}, []);
+	}
+
+	useInitAnimations();
 
 	return (
 		<div className="container__main">
@@ -127,13 +153,14 @@ function App() {
 			</div>
 			<div className="typed-strings regular-1">
 				<p>
-					я вижу, что ты, похоже, всё ещё злишься на меня, знаю, что тебе нужно
-					пространство, и я искренне старался дать тебе его всё это время. но
-					сегодня — твой день, и я не хочу, чтобы ты думала, что мне всё равно.
-					я знаю, что ты тоже скучаешь по мне, и это молчание разрывает меня
-					изнутри каждую секунду. даже если шанс того, что эти слова
-					по-настоящему дойдут до тебя, невелик, я не могу промолчать. потому
-					что ты заслуживаешь это слышать <span className="green">=)</span>
+					я вижу, что ты, похоже, всё ещё злишься на меня и не хочешь общаться.
+					знаю, что тебе нужно пространство, и всё это время я искренне старался
+					дать тебе его. но сегодня — твой день, и я не хочу, чтобы ты думала,
+					что мне всё равно. я знаю, что ты тоже скучаешь по мне, и это молчание
+					разрывает меня изнутри каждую секунду. даже если шанс того, что эти
+					слова по-настоящему дойдут до тебя невелик, я не могу промолчать.
+					потому что ты заслуживаешь это слышать{' '}
+					<span className="green">=)</span>
 					<br /> <br />
 					это не просто поздравление, анечка, это крик моей души. я понимаю, что
 					день рождения — не лучший повод для откровений в нашей ситуации, но
@@ -191,7 +218,7 @@ function App() {
 					остальные праздники, а ПО-НАСТОЯЩЕМУ особенный, как и ты. хотя, если
 					честно, каждый другой день с тобой ощущался как подарок. но не думай,
 					что я пишу это всё просто в честь др, — я всегда к тебе так отношусь,
-					пусть мы в последнее время и не говорили так ярко о чувствах...
+					пусть мы и не говорили о чувствах так ярко в последнее время...
 					<br />
 					<br />
 					и хоть мы и играем в эту молчанку, я всё ещё постоянно думаю о тебе,
