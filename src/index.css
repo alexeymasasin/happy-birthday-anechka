@@ -235,3 +235,30 @@ a {
 .salute--exiting {
 	opacity: 1;
 }
+
+.gif {
+	position: relative;
+}
+
+.gif_annotation {
+	position: absolute;
+	left: 55px;
+	bottom: 40px;
+	font-size: 18px;
+	font-family: 'Press Start 2P', system-ui;
+	text-shadow: 4px 4px 4px #0a0a0a;
+	animation: gif_annotation 2s infinite;
+	width: 230px;
+}
+
+@keyframes gif_annotation {
+	0% {
+		transform: rotate(6deg);
+	}
+	50% {
+		transform: rotate(-6deg);
+	}
+	100% {
+		transform: rotate(6deg);
+	}
+}
