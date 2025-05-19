@@ -27,8 +27,8 @@ function MainContent() {
 	const cuties_start = 2700;
 	const regular_1_start = 2500;
 	const peace_btn_start = 346000;
-	const slider_start = 385000;
-	const gif_start = 386000;
+	const slider_start = 365000;
+	const gif_start = 366000;
 
 	function useInitAnimations() {
 		useEffect(() => {
@@ -330,11 +330,11 @@ function MainContent() {
 					я должен был дарить тебе тепло, несмотря на холод, понимать, что его
 					причина в твоём самочувствии, а не отношении ко мне.
 					<br />
-					должен был просто оставаться рядом в эти моменты, а не самому просить
-					поддержки в момент, когда тебе самой хуже некуда.
+					должен был просто оставаться рядом в эти моменты, а не требовать
+					поддержки в момент, когда тебе самой было хуже некуда.
 					<br />
-					мне не стоило говорить, что я нормально буду воспринимать любые ответы
-					или даже их отсутствие, когда даже тёплые могли меня тронуть.
+					мне не стоило говорить, что меня не будет расстраивать холод в твоих
+					словах, или даже их отсутствие, когда даже тёплые могли меня тронуть.
 					<br />
 					я очень виню за то, что постоянно выражал недовольство и обиду за
 					ответы, отличающиеся от тех, которые я хотел увидеть.
@@ -379,8 +379,8 @@ function MainContent() {
 					ругались. спасибо тебе за всё, анечка, ты мой ангел.
 					<br />
 					я всё ещё верю в нас и очень надеюсь, что у нас всё наладится.
-					понимаю, что тебе, возможно, нужно ещё время, но если у тебя
-					когда-нибудь появится желание поговорить — я буду ждать.
+					понимаю, что тебе, возможно, нужно ещё время, но если ты готова
+					поговорить — я здесь.
 					<br /> <br />
 					{'-/-/-/-/-/-/-/-/-/-/-'}
 					<br />
@@ -430,6 +430,9 @@ function MainContent() {
 					<img src="./slider/6.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
+					<img src="./slider/66_1.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
 					<img src="./slider/9.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
@@ -442,13 +445,19 @@ function MainContent() {
 					<img src="./slider/7.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
+					<img src="./slider/776.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
+					<img src="./slider/668.jpg" alt="" />
+				</SwiperSlide>
+				<SwiperSlide>
 					<img src="./slider/77.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src="./slider/99.jpg" alt="" />
+					<img src="./slider/66.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src="./slider/66.jpg" alt="" />
+					<img src="./slider/15.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src="./slider/10.jpg" alt="" />
@@ -457,7 +466,7 @@ function MainContent() {
 					<img src="./slider/14.jpg" alt="" />
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src="./slider/15.jpg" alt="" />
+					<img src="./slider/ya.jpg" alt="" />
 				</SwiperSlide>
 			</Swiper>
 			<div className="gif">
