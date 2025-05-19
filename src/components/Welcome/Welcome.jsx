@@ -1,9 +1,11 @@
 import { useRef, useState } from 'react';
 import confetti from 'canvas-confetti';
+import BalloonAnimation from '../BalloonAnimation/BalloonAnimation';
 
 function Welcome({ onDismiss }) {
 	const audioRef = useRef(null);
 	const [isExiting, setIsExiting] = useState(false);
+	const [animate, setAnimate] = useState(false);
 
 	const handleButtonClick = () => {
 		if (!audioRef.current) {
@@ -17,6 +19,7 @@ function Welcome({ onDismiss }) {
 				console.log('Музыка начала играть');
 				setIsExiting(true);
 				fire();
+				setAnimate(true);
 
 				setTimeout(() => {
 					onDismiss();
@@ -57,7 +60,13 @@ function Welcome({ onDismiss }) {
 				<button onClick={handleButtonClick}>OK</button>
 			</div>
 
-			<div className={`salute ${isExiting ? 'salute--exiting' : ''}`}></div>
+			{animate ? (
+				<div className={`salute ${isExiting ? 'salute--exiting' : ''}`}>
+					<BalloonAnimation animate={animate} />
+				</div>
+			) : (
+				''
+			)}
 		</>
 	);
 }
