@@ -20,15 +20,17 @@ function App() {
 }
 
 function MainContent() {
+	const [showEnding, setShowEnding] = useState(false);
+
 	const textTypeSpeed = 27;
 	const regularTextTypeSpeed = 27;
 	const smilesTypeSpeed = 100;
 
 	const cuties_start = 2700;
 	const regular_1_start = 2500;
-	const peace_btn_start = 346000;
-	const slider_start = 381000;
-	const gif_start = 382000;
+	// const peace_btn_start = 346000;
+	// const slider_start = 381000;
+	// const gif_start = 382000;
 
 	function useInitAnimations() {
 		useEffect(() => {
@@ -93,37 +95,38 @@ function MainContent() {
 							cursorChar: '|',
 							onComplete() {
 								typedInstance.cursor.remove();
+								setShowEnding(true);
 							},
 						});
 					}, regular_1_start);
 				});
-			// BTN
-			document.querySelectorAll('.peace-wrap').forEach(function (el) {
-				document.querySelectorAll('.peace-wrap').forEach(function (el) {
-					el.style.opacity = '0';
-					setTimeout(() => {
-						el.style.opacity = '1';
-					}, peace_btn_start);
-				});
-			});
-			// SWIPER
-			document.querySelectorAll('.mySwiper').forEach(function (el) {
-				document.querySelectorAll('.mySwiper').forEach(function (el) {
-					el.style.opacity = '0';
-					setTimeout(() => {
-						el.style.opacity = '1';
-					}, slider_start);
-				});
-			});
-			// GIF
-			document.querySelectorAll('.gif').forEach(function (el) {
-				document.querySelectorAll('.gif').forEach(function (el) {
-					el.style.opacity = '0';
-					setTimeout(() => {
-						el.style.opacity = '1';
-					}, gif_start);
-				});
-			});
+			// // BTN
+			// document.querySelectorAll('.peace-wrap').forEach(function (el) {
+			// 	document.querySelectorAll('.peace-wrap').forEach(function (el) {
+			// 		el.style.opacity = '0';
+			// 		setTimeout(() => {
+			// 			el.style.opacity = '1';
+			// 		}, peace_btn_start);
+			// 	});
+			// });
+			// // SWIPER
+			// document.querySelectorAll('.mySwiper').forEach(function (el) {
+			// 	document.querySelectorAll('.mySwiper').forEach(function (el) {
+			// 		el.style.opacity = '0';
+			// 		setTimeout(() => {
+			// 			el.style.opacity = '1';
+			// 		}, slider_start);
+			// 	});
+			// });
+			// // GIF
+			// document.querySelectorAll('.gif').forEach(function (el) {
+			// 	document.querySelectorAll('.gif').forEach(function (el) {
+			// 		el.style.opacity = '0';
+			// 		setTimeout(() => {
+			// 			el.style.opacity = '1';
+			// 		}, gif_start);
+			// 	});
+			// });
 
 			return () => {
 				document.querySelectorAll('.typed').forEach((el) => {
@@ -163,7 +166,7 @@ function MainContent() {
 					равно.
 					<br />
 					даже если шанс того, что эти слова по-настоящему дойдут до тебя
-					невелик, я не могу просто молчать, ведь ты заслуживаешь слышать это
+					невелик, я всё равно использую его, ведь ты заслуживаешь слышать это
 					всё, несмотря на все обстоятельства <span className="green">=)</span>
 					<br /> <br />я понимаю, что день рождения — не лучший повод для
 					откровений и сентиментов в нашей ситуации, но оставить тебя без этих
@@ -175,13 +178,14 @@ function MainContent() {
 					решение, не хочу давить и тревожить, но мне ТАК много хочется сказать
 					и пожелать тебе в этот день... ведь ты — самое светлое и важное, что
 					есть в моей жизни, поэтому просто прими этот текст как знак, что ты
-					важна
+					важна.
 					<br /> <br />
 					{'-/-/-/-/-/-/-/-/-/-/-'}
 					<br /> <br />
-					<span className="time-flies">
+					<span className="yellow">
 						как же незаметно пролетел ещё один год!!
-					</span>{' '}
+					</span>
+					<br />
 					год, в котором ты, как всегда, делала этот мир ярче, добрее, теплее, и
 					вообще в разы лучше, просто тем, что ты есть.
 					<br />
@@ -191,8 +195,9 @@ function MainContent() {
 					которой у меня с первого дня пархают бабочки в животе, в груди
 					взрываются фейерверки, а в голове крутится только одна мысль —{' '}
 					<span className="red">
-						«как вообще можно быть настолько идеальной???».
+						«как вообще можно быть настолько идеальной???»
 					</span>
+					.
 					<br />
 					я не могу представить себе человека, который и на каплю смог бы
 					приблизиться к тебе, серьёзно.
@@ -236,7 +241,7 @@ function MainContent() {
 					<br />
 					<br />я нахожу частички тебя буквально во всех вещах, мне как и прежде
 					нравится всё, что с тобой связано. и я готов сколько нужно ждать
-					момента, когда мы наконец сможем найти общий язык и помириться.
+					момента, когда мы наконец сможем найти общий язык и помириться...
 					<br />
 					<br />
 					...и я смогу повставлять сирень в твои волосыыы {'>:)'}
@@ -325,6 +330,7 @@ function MainContent() {
 					бедняжка...
 					<br />
 					<br />я хочу чтобы ты знала, что сейчас я учусь:
+					<br />
 					<span className="purple">—</span> не перекладывать на тебя то, с чем
 					должен справляться сам.
 					<br />
@@ -332,14 +338,14 @@ function MainContent() {
 					сваливать на любимого человека, а моя личная ответственность и забота.
 					не твоя.
 					<br />
-					<br />
 					<span className="purple">—</span> давать тебе время, не требуя «ответа
 					здесь и сейчас».
 					<br />я не знал, что мои попытки «решить всё сейчас» для тебя
-					выглядели как давление и атаки. раньше мне казалось это правильным
-					подходом, т.к. я не учитывал, что ты можешь иначе реагировать на
-					конфликты. поэтому твои попытки отойти от эмоций мне ложно казались
-					отстраненностью и игнорированием.
+					выглядели как давление и атаки. раньше такой подход казался мне
+					правильным, потому что я не учитывал, что ты можешь иначе реагировать
+					на конфликты, и поэтому твои попытки отойти от эмоций мне казались
+					обидной отстраненностью и игнорированием.
+					<br />
 					<span className="purple">—</span> ценить твои слова, даже если они не
 					те, что я хотел бы услышать.
 					<br />
@@ -347,7 +353,6 @@ function MainContent() {
 					от того, что я тогда хотел услышать. это было максимально эгоистично и
 					глупо, ведь все твои слова одинаково важны для меня, вне зависимости
 					от их посыла, — они же твои.
-					<br />
 					<br />
 					<br />и хотя это всё было просто ужасно, знай, что я делал это не ради
 					контроля и давления, а от переизбытка чувств и страха тебя потерять.
@@ -360,8 +365,10 @@ function MainContent() {
 					<span className="yellow">
 						всё, что от меня требовалось — это просто быть рядом в трудную
 						минуту, воздержаться от вопросов и разговоров о тревоге, когда ты
-						напрямую об этом просила.
+						напрямую об этом просила
 					</span>
+					.
+					<br />
 					<br />
 					я должен был дарить тебе тепло в ответ на холод, понимать, что его
 					причина в твоём самочувствии, а не в отношении ко мне.
@@ -373,8 +380,10 @@ function MainContent() {
 					мне очень стыдно за то, что я, будучи тревожным комком нервов,
 					сковывал твою свободу, устраивал бесконечные расспросы, глупую
 					ревность… за то, что так долго не слышал тебя и обижался, пока твоя
-					мама не объяснила мне всё, что ты всегда пыталась мне сказать. но
-					благодаря ей я правда стал лучше!{' '}
+					мама не объяснила мне всё, что ты всегда пыталась мне сказать.
+					<br />
+					<br />
+					но благодаря ей я правда стал лучше!{' '}
 					<span className="red">не идеальным</span>,{' '}
 					<span className="green">но лучше</span>. и я продолжаю работать над
 					этим и над тем, чтобы стать по-настоящему надёжным и стойким рядом с
@@ -405,10 +414,10 @@ function MainContent() {
 					<br />
 					<br />
 					я всё ещё верю в нас и очень надеюсь, что в один день у нас ещё всё
-					наладится. понимаю, что тебе нужно ещё больше времени и пространства,
-					чтобы подумать, но если ты захочешь поговорить — знай, я всегда здесь.
-					больше не лезу, терпеливо жду и никуда не пропадаю, как и моя любовь к
-					тебе.
+					может наладится. понимаю, что тебе нужно ещё больше времени и
+					пространства, чтобы подумать, но если ты захочешь поговорить — знай, я
+					всегда здесь. больше не лезу, терпеливо жду и никуда не пропадаю, как
+					и моя любовь к тебе.
 					<br />
 					<br />
 					это поздравление, как и все подарочки (если ты их уже получила) — не
@@ -418,7 +427,7 @@ function MainContent() {
 					эмоции. я просто очень хотел сделать тебе приятно.
 					<br />
 					<br />
-					и пусть этот год принесёт тебе столько света, сколько ты дарила мне.
+					пусть этот год принесёт тебе столько света, сколько ты дарила мне.
 					<br />
 					ты — моя единственная родственная душа в этом мире, мой самый близкий
 					и любимый человек, мой котёночек. и я бесконечно благодарен тебе за
@@ -436,7 +445,7 @@ function MainContent() {
 					<br />
 					<br />
 					<a href="http://t.me/alexeymasasin" target="_blank">
-						Если что, я здесь!
+						я здесь!
 						<img
 							className="heart"
 							src="./icons/1670710-200.png"
@@ -452,71 +461,80 @@ function MainContent() {
 				</p>
 			</div>
 			<span className="typed-still-regular-1 regular-text"></span>
-			<Swiper
-				effect={'cards'}
-				grabCursor={true}
-				modules={[EffectCards]}
-				className="mySwiper"
-			>
-				<SwiperSlide>
-					<img src="./slider/1.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/2.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/4.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/5.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/6.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/66_1.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/9.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/3.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/8.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/7.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/776.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/668.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/77.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/66.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/15.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/10.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/14.jpg" alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src="./slider/ya.jpg" alt="" />
-				</SwiperSlide>
-			</Swiper>
-			<div className="gif">
-				<img src="./gifs/IMG_1814.gif" alt="" />
-				<p className="gif_annotation">ты моё солнышко!!</p>
-			</div>
+			{showEnding ? (
+				<>
+					<Swiper
+						effect={'cards'}
+						grabCursor={true}
+						modules={[EffectCards]}
+						className="mySwiper"
+					>
+						<SwiperSlide>
+							<img src="./slider/1.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/2.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/4.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/5.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/6.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/66_1.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/9.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/3.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/8.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/7.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/776.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/23423.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/668.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/77.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/66.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/15.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/10.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/14.jpg" alt="" />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src="./slider/ya.jpg" alt="" />
+						</SwiperSlide>
+					</Swiper>
+					<div className="gif">
+						<img src="./gifs/IMG_1814.gif" alt="" />
+						<p className="gif_annotation">ты моё солнышко!!</p>
+					</div>
+				</>
+			) : (
+				''
+			)}
 		</div>
 	);
 }
