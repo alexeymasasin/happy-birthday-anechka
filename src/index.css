@@ -3,12 +3,17 @@
 	font-weight: 400;
 
 	color: rgba(255, 247, 254, 0.87);
-	background-color: #0a0a0a;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	background-color: #0a0a0a;
+	opacity: 1;
+	background-image: linear-gradient(#141414 2px, transparent 2px),
+		linear-gradient(to right, #141414 2px, #0a0a0a 2px);
+	background-size: 20px 20px;
 }
 html {
 	overflow-x: hidden;
@@ -69,6 +74,31 @@ p {
 	}
 	.heading-cuties {
 		font-size: 14px;
+	}
+}
+
+.time-flies {
+	animation: time-flies-colors 2s infinite;
+}
+
+@keyframes time-flies-colors {
+	0% {
+		color: #97ef7f;
+	}
+	32% {
+		color: #97ef7f;
+	}
+	33% {
+		color: #72f8f3;
+	}
+	65% {
+		color: #72f8f3;
+	}
+	66% {
+		color: #f9f68b;
+	}
+	99% {
+		color: #f9f68b;
 	}
 }
 
