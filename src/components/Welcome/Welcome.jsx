@@ -9,7 +9,7 @@ function Welcome({ onDismiss }) {
 
 	const handleButtonClick = () => {
 		if (!audioRef.current) {
-			audioRef.current = new Audio('./music.mp3');
+			audioRef.current = new Audio('./music2.mp3');
 			audioRef.current.loop = true;
 		}
 
@@ -52,7 +52,8 @@ function Welcome({ onDismiss }) {
 					тг, в нём всё ломается(
 					<br />
 					<br />
-					и не пугайся, когда нажмёшь на кнопку ниже - там музычка заиграет!
+					и не пугайся, когда нажмёшь на кнопку ниже - там музычка заиграет! мы
+					её вместе писали, кстати, если помнишь
 					<br />
 					<br />
 					-/-/-/-/-/-/-/-/-
